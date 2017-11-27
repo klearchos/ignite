@@ -34,7 +34,7 @@ public class PopulateMySQL {
 
             DataFactory df = new DataFactory();
 
-            for (long i = 2_500_000; i < 5_000_000; i++) {
+            for (long i = 0; i < 5_000_000; i++) {
                 stmt.setLong(1, i);
                 stmt.setString(2, df.getFirstName());
                 stmt.setString(3, df.getLastName());
@@ -61,7 +61,8 @@ public class PopulateMySQL {
                 if(stmt!=null)
                     stmt.close();
             }catch(SQLException se2){
-            }// nothing we can do
+                se2.printStackTrace();
+            }
             try{
                 if(conn!=null)
                     conn.close();
