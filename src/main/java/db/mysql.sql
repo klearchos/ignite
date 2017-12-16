@@ -1,3 +1,5 @@
+CREATE DATABASE ignite CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
 create table person
 (
   id bigint(11) not null

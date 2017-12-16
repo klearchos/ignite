@@ -54,7 +54,7 @@ public class ClientNodeCodeStartup {
         qry = new SqlFieldsQuery(
                 "select p.firstName, p.lastName, p.orgId, p.resume, p.salary from Person p join table(id bigint = ?) i "
                         + "on p.id = i.id")
-                .setArgs(new Object[]{new Long[]{1L, 2L, 3L, 4L, 5L}});
+                .setArgs(new Object[] { new Long[] {1L, 2L, 3L, 4L, 5L}});
         sw.start();
         personCols = cache.query(qry).getAll();
         sw.stop();

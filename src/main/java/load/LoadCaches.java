@@ -1,5 +1,6 @@
 package load;
 
+import config.ClientConfigurationFactory;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
 
@@ -19,9 +20,9 @@ public class LoadCaches {
      * @throws Exception If failed.
      **/
     public static void main(String[] args) throws Exception {
-        try (Ignite ignite = Ignition.start("Persons-client.xml")) {
+        // Ignite ignite = Ignition.start("Persons-client.xml")
+        try (Ignite ignite = Ignition.start(ClientConfigurationFactory.createConfiguration())) {
             System.out.println(">>> Loading caches...");
-
             System.out.println(">>> Loading cache: PersonCache");
             ignite.cache("PersonCache").loadCache(null);
 

@@ -157,53 +157,6 @@ public class Person implements Serializable {
         return result;
     }
 
-    //    /** {@inheritDoc} **/
-//    @Override public boolean equals(Object o) {
-//        if (this == o)
-//            return true;
-//
-//        if (!(o instanceof Person))
-//            return false;
-//
-//        Person that = (Person)o;
-//
-//        if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null)
-//            return false;
-//
-//
-//        if (lastname != null ? !lastname.equals(that.lastname) : that.lastname != null)
-//            return false;
-//
-//
-//        if (orgid != null ? !orgid.equals(that.orgid) : that.orgid != null)
-//            return false;
-//
-//
-//        if (resume != null ? !resume.equals(that.resume) : that.resume != null)
-//            return false;
-//
-//
-//        if (salary != null ? !salary.equals(that.salary) : that.salary != null)
-//            return false;
-//
-//        return true;
-//    }
-//
-//    /** {@inheritDoc} **/
-//    @Override public int hashCode() {
-//        int res = firstname != null ? firstname.hashCode() : 0;
-//
-//        res = 31 * res + (lastname != null ? lastname.hashCode() : 0);
-//
-//        res = 31 * res + (orgid != null ? orgid.hashCode() : 0);
-//
-//        res = 31 * res + (resume != null ? resume.hashCode() : 0);
-//
-//        res = 31 * res + (salary != null ? salary.hashCode() : 0);
-//
-//        return res;
-//    }
-
     /** {@inheritDoc} **/
     @Override public String toString() {
         return "Person [" + 
